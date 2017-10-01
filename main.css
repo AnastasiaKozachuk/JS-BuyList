@@ -8,19 +8,34 @@
     font-weight: normal;
 }
 
+
+
+
+
 body {
     margin: 0px;
     background-color: #dadada;
+   /* overflow-y:hidden*/
 }
 
 .column {
     height:250px;
-    background-color: inherit;
+    background-color: #dadada;
 }
 
+.main_col{
+    width: 70%;
+    position: relative;
+   display: flex;
+    height: 570px;
+    margin:100px auto;
+
+}
 .col_f{
    flex:3 1 600px;
-
+}
+.col_s{
+    flex:1 1 300px;
 }
 
 .box{
@@ -35,6 +50,7 @@ body {
     display: flex;
     border: 1px solid #dbdbdb;
 }
+
 
 .in_box{
     flex: 1 1 50px;
@@ -243,22 +259,11 @@ body {
 .but:active{
     background-color: #0d71bb;
 }
-.col_s{
-    flex:1 1 300px;
-}
 
 
 
-.main_col{
-    width: 70%;
-    position: relative;
-    top: 100px;
-    display: flex;
-    flex-flow: row wrap;
-    height: 570px;
-    margin: auto;
 
-}
+
 
 .prod_lf{
     flex: 1 1 250px;
@@ -271,3 +276,88 @@ body {
     font-family: LatoLight Tahoma sans-serif;
     font-size: 22px;
 }
+
+.badge{
+    transition: all 1s ease;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: -130px;
+    left:130px;
+    width:200px;
+    height:200px;
+    background-color: #dc45ff;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding:20px 15px 15px 15px;
+    color:white;
+    font-family: Tahoma;
+    text-align: center;
+    font-size: 20px;
+}
+
+.title{
+
+    display: block;
+    font-size: 30px;
+    height:70px;
+}
+.badge:hover{
+    transform: translateY(-130px);
+    background-color: deepskyblue;
+}
+
+@media print{
+    .title{
+        display: none;
+    }
+    .badge{
+        bottom: -80px;
+        color:black;
+        background-color: #dbdbdb;
+        border: 5px solid #942ec8;
+    }
+}
+@media(max-width: 950px){
+    .col_f{
+        width: 100%;
+        min-width: 450px;
+    }
+    .col_s{
+        width: 100%;
+        min-width: 450px;
+    }
+    .main_col {
+        flex-flow: row wrap;
+    }
+}
+
+button{
+    position: relative;
+}
+button::after{
+    transition: all 1s ease;
+    content:""attr(data-tooltip);
+    position: absolute;
+    top:0px;
+    left:50%;
+    width: 140px;
+    height:40px;
+    box-sizing: border-box;
+    margin-left: -70px;
+    padding:10px;
+    color:transparent;
+    background-color: transparent;
+    border-radius: 10px;
+    font-size: 17px;
+    font-family: Tahoma;
+    text-align: center;
+}
+
+button:hover::after{
+    display: block;
+    color:white;
+    background-color: #b43fd6;
+    transform: translateY(-50px);
+
+}
+
