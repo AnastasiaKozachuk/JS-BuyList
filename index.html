@@ -7,103 +7,35 @@
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 <body>
-
 <div class="main_col">
-
-    <div class="column col_f">
-        <div class="box">
-            <div class="in_box_f">
+    <div class="col_f" >
+        <div class="box"  >
+            <div class="in_box_f" id="main">
                 <form class="form_f">
-
-                    <input class=" text_area " type="text" placeholder="Назва товару"/><button class="button_f but" data-tooltip="Tooltip">Додати</button>
+                    <input class=" text_area " type="text" placeholder="Назва товару"/><button type="button" class="button_f but" id ="add_but"data-tooltip="Tooltip">Додати</button>
                 </form>
-            </div>
-            <div class="in_box">
-                <div class="prod_lf col_f_prod">
-                   Помідори
-                </div>
-                <div class="prod_lf"  >
-                    <form class="form_s ">
-                        <button class="but_col_f button_col_s" data-tooltip="Tooltip">&#10134;</button>
-                        <span class="span_f">1</span>
-                        <button class="but_col_s button_col_s" data-tooltip="Tooltip">&#10133;</button>
-                    </form>
-                </div>
-                <div class="prod_lf" >
-                    <form class="form_t">
-                        <button class="but_buy" data-tooltip="Tooltip" >Куплено</button>
-                        <button class="but_remove" data-tooltip="Tooltip">&#10060;</button>
-                    </form>
-                </div>
 
             </div>
+            <div id="first_column" >
 
-            <div class="in_box">
-                <div class="prod_lf col_f_prod">
-                    Печиво
-                </div>
-                <div class="prod_lf"  >
-                    <form class="form_s ">
-                        <button class="but_col_f button_col_s" data-tooltip="Tooltip">&#10134;</button>
-                        <span class="span_f">1</span>
-                        <button class="but_col_s button_col_s" data-tooltip="Tooltip">&#10133;</button>
-                    </form>
-                </div>
-                <div class="prod_lf" >
-                    <form class="form_t">
-                        <button class="but_buy" data-tooltip="Tooltip">Куплено</button>
-                        <button class="but_remove" data-tooltip="Tooltip">&#10060;</button>
-                    </form>
-                </div>
             </div>
-            <div class="in_box">
-                <div class="prod_lf col_f_prod">
-                    Сир
-                </div>
-                <div class="prod_lf"  >
-                    <form class="form_s ">
-                        <button class="but_col_f button_col_s" data-tooltip="Tooltip">&#10134;</button>
-                        <span class="span_f">1</span>
-                        <button class="but_col_s button_col_s" data-tooltip="Tooltip">&#10133;</button>
-                    </form>
-                </div>
-                <div class="prod_lf" >
-                    <form class="form_t">
-                        <button class="but_buy" data-tooltip="Tooltip">Куплено</button>
-                        <button class="but_remove" data-tooltip="Tooltip">&#10060;</button>
-                    </form>
-                </div>
-            </div>
-
-
-
             </div>
     </div>
 
 
-    <div class="column col_s">
-        <div class="box">
-              <div class="in_box font_st ">
+    <div class="col_s"   >
+        <div  class="box" id="second_column">
+              <div class="in_box font_st el_left">
                     Залишилося
               </div>
-              <div class="in_box ">
-                  <span class="span_s">
-                      <span>Помідори</span>
-                      <span class="span_amount">1</span>
-                  </span>
-                  <span class="span_s">
-                      <span>Печиво</span>
-                      <span class="span_amount">1</span>
-                  </span>
-                  <span class="span_s">
-                      <span>Сир</span>
-                      <span class="span_amount">1</span>
-                  </span>
+
+              <div  id="left" class="sec_row ">
+
               </div>
               <div class="in_box font_st ">
                     Куплено
               </div>
-              <div class="in_box ">
+              <div id ="have_bought" class="sec_row ">
 
 
               </div>
@@ -115,6 +47,9 @@
     <span class="title">My buylist</span>
     <span>Created by: Kozachuk Anastasia</span>
 </div>
+
+<script		type="text/javascript"src="jquery-3.2.0.min.js"></script>
+<script	type="text/javascript" src="js/main.js">	</script>
 
   </body>
   </html>
